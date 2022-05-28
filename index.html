@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoke text</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <p class="text" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis nobis, saepe neque explicabo assumenda, harum blanditiis quod eaque odit magni ullam aliquid laborum aut numquam adipisci deserunt veritatis veniam molestiae voluptates eos. Quae illo expedita accusantium, autem repellendus itaque quam voluptates, voluptas porro delectus in quos omnis reprehenderit culpa facilis impedit aliquam facere fugiat tempora saepe praesentium, ea deserunt pariatur! Id temporibus dolorem aspernatur exercitationem velit non recusandae, quos, molestias molestiae minima mollitia quis ipsa ab! Veritatis voluptatum pariatur, magni, nulla similique molestias ea in maiores possimus adipisci culpa perspiciatis consectetur labore tempore, temporibus ex quis ducimus dicta fugiat.</p>
+    </section>
+
+
+    <script>
+        const text = document.querySelector('.text');
+        text.innerHTML = text.textContent.replace(/\S/g,"<span>$&</span>");
+
+
+       const letters = document.querySelectorAll('span');
+
+       for (let i=0; i<letters.length; i++){
+
+           letters[i].addEventListener("mouseover", function(){
+
+               letters[i].classList.add('active')
+           })
+       }
+
+        </script>
+    
+</body>
+</html>
